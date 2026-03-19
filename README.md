@@ -9,41 +9,41 @@ AI-powered developer tool that converts natural language into Cloudflare WAF fir
 ### AI Firewall Rule Generation
 
 -   Converts natural language into valid Cloudflare Firewall
-    Expressions\
--   Generates JSON WAF rule objects\
--   Performs ambiguity detection\
--   Performs rule safety analysis\
+    Expressions
+-   Generates JSON WAF rule objects
+-   Performs ambiguity detection
+-   Performs rule safety analysis
 -   Provides short technical explanations
 
 ### Safety Engine
 
-Detects dangerous patterns such as: - Blocking all traffic\
-- Blocking Cloudflare IP ranges\
-- Blocking admin paths\
-- Country-wide blocks without restrictions\
-- Unrestricted actions\
+Detects dangerous patterns such as: - Blocking all traffic
+- Blocking Cloudflare IP ranges
+- Blocking admin paths
+- Country-wide blocks without restrictions
+- Unrestricted actions
 - Invalid expressions
 
 ### Durable Object Memory
 
--   Stores full rule history\
--   Persistent memory\
--   Clear audit trail\
+-   Stores full rule history
+-   Persistent memory
+-   Clear audit trail
 -   Worker → DO coordination
 
 ### Cloudflare-Style Dashboard UI
 
--   Input panel\
--   Expression viewer\
--   JSON rule viewer\
--   Warning panel\
+-   Input panel
+-   Expression viewer
+-   JSON rule viewer
+-   Warning panel
 -   Rule history sidebar
 
 ### Technologies Used
 
--   Cloudflare Workers\
--   Durable Objects\
--   Workers AI (Llama 3.3)\
+-   Cloudflare Workers
+-   Durable Objects
+-   Workers AI (Llama 3.3)
 -   HTML + CSS + JavaScript
 
 ------------------------------------------------------------------------
@@ -95,10 +95,10 @@ cf_ai_waf_firewall_copilot/
 
 The Worker constructs a structured system prompt enforcing:
 
--   Valid JSON output\
--   Strict Cloudflare WAF expression syntax\
--   Safety warnings\
--   Clarification detection\
+-   Valid JSON output
+-   Strict Cloudflare WAF expression syntax
+-   Safety warnings
+-   Clarification detection
 -   Short explanations
 
 AI output is parsed, validated, and stored in a Durable Object as
@@ -114,9 +114,9 @@ persistent rule history.
 Try:
 
 -   "block POST requests to /login from India"\
--   "allow only IP 123.45.67.89"\
--   "challenge non-US traffic"\
--   "block python-requests bots"\
+-   "allow only IP 123.45.67.89"
+-   "challenge non-US traffic"
+-   "block python-requests bots"
 -   "block everything" → triggers warnings & clarification
 
 ------------------------------------------------------------------------
