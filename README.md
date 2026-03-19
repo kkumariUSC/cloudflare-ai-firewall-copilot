@@ -3,6 +3,17 @@
 AI-powered developer tool that converts natural language into Cloudflare WAF firewall expressions and JSON rules, with safety analysis, ambiguity handling, and persistent rule history using Durable Objects.
 
 ------------------------------------------------------------------------
+## Why This Project Matters
+Modern cloud security systems require precise and safe firewall configurations, but writing WAF rules manually is error-prone and complex. This project explores how LLMs can assist developers by translating natural language into valid firewall rules while enforcing safety constraints and preventing misconfigurations.
+
+------------------------------------------------------------------------
+## Key Engineering Decisions
+- Used Cloudflare Durable Objects to maintain persistent rule history and enable stateful interactions across requests
+- Implemented validation and safety checks to prevent dangerous or overly broad firewall rules
+- Structured prompts to enforce strict JSON output and valid WAF expression syntax
+- Designed separation between frontend UI, Worker API, and state management for scalability and maintainability
+
+-------------------------------------------------------------------------
 
 # 🚀 Features
 
@@ -17,7 +28,8 @@ AI-powered developer tool that converts natural language into Cloudflare WAF fir
 
 ### Safety Engine
 
-Detects dangerous patterns such as: - Blocking all traffic
+Detects dangerous patterns such as: 
+- Blocking all traffic
 - Blocking Cloudflare IP ranges
 - Blocking admin paths
 - Country-wide blocks without restrictions
@@ -39,12 +51,12 @@ Detects dangerous patterns such as: - Blocking all traffic
 -   Warning panel
 -   Rule history sidebar
 
-### Technologies Used
-
--   Cloudflare Workers
--   Durable Objects
--   Workers AI (Llama 3.3)
--   HTML + CSS + JavaScript
+## Tech Stack
+- Cloudflare Workers (serverless backend)
+- Durable Objects (stateful storage)
+- Workers AI (Llama 3.3)
+- JavaScript (frontend + backend)
+- HTML/CSS (UI)
 
 ------------------------------------------------------------------------
 
