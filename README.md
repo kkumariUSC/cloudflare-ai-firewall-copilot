@@ -1,12 +1,6 @@
 # ⚡ Cloudflare AI Firewall Rule Copilot
 
-An AI-powered tool that converts natural language into **Cloudflare WAF
-Firewall Expressions** and **JSON firewall rules**, with safety
-analysis, clarification handling, and full rule history stored using
-Durable Objects.
-
-Built for Cloudflare's 2026 Software Engineering Internship AI
-assignment.
+AI-powered developer tool that converts natural language into Cloudflare WAF firewall expressions and JSON rules, with safety analysis, ambiguity handling, and persistent rule history using Durable Objects.
 
 ------------------------------------------------------------------------
 
